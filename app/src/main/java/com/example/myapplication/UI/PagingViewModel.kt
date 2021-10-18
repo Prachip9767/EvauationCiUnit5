@@ -6,7 +6,7 @@ import com.example.myapplication.Reposetory.PagingRepo
 
 class PagingViewModel:ViewModel() {
     private val repo=PagingRepo()
-    fun getPage(){
+    fun getPage()=
         repo.getPageList()
-    }
+
 }

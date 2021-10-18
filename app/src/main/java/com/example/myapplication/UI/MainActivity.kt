@@ -3,8 +3,12 @@ package com.example.myapplication.UI
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var pagingViewModel: PagingViewModel
@@ -16,6 +20,21 @@ class MainActivity : AppCompatActivity() {
         mainBinding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         pagingViewModel=ViewModelProvider(this).get(PagingViewModel::class.java)
-        pagingViewModel.getPage().
+        setAdapter()
+        pagingViewModel.getPage().observe(this,{
+            it?.let {
+                CoroutineScope(Dispatchers.IO).launch {
+                    charecterAdapter.submitData(it)
+                }
+            }
+        })
+}
+private fun setAdapter(){
+    charecterAdapter= CharecterAdapter()
+    val linearLayoutManager=LinearLayoutManager(this)
+    mainBinding.recyclerView.apply {
+        adapter=charecterAdapter
+        layoutManager=linearLayoutManager
     }
+}
 }

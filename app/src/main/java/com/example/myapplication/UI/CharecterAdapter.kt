@@ -56,8 +56,8 @@ class CharecterAdapter() : PagingDataAdapter<ResponseDTOItem, CharecterAdapter.M
         val id: TextView =view.findViewById(R.id.tvid)
 
         fun setData(model: ResponseDTOItem?){
-            var pathImage="https://image.tmdb.org/t/p/w500"
-            Glide.with(PersonImage).load(pathImage+model?.image).into(PersonImage)
+
+            Glide.with(PersonImage).load(model?.image?.medium).into(PersonImage)
             CountryName.text="Movie Name - ${model?.country}"
             deathDate.text="Language - ${model?.deathday}"
             birthDate.text="Released Date - ${model?.birthday}"
