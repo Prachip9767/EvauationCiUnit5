@@ -24,6 +24,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -31,6 +32,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        dataBinding = true
+    }
+
+
 }
 
 dependencies {
@@ -99,7 +105,7 @@ dependencies {
 
     //google
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
-
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
     //gif
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.22'
 }
