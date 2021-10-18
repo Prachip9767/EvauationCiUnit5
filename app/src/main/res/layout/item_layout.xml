@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/ivImage"
+        android:scaleType="centerCrop"
+        android:layout_width="250dp"
+        android:src="@drawable/img"
+        android:layout_height="250dp"/>
+    <TextView
+        android:id="@+id/tvCountryName"
+        android:layout_width="wrap_content"
+        android:text="Country Name"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tvbDate"
+        android:layout_width="wrap_content"
+        android:text="Birth Date"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tvdDate"
+        android:layout_width="wrap_content"
+        android:text="Death Date"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+</LinearLayout>
