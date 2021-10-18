@@ -25,51 +25,23 @@ public final class CharecterAdapter extends androidx.paging.PagingDataAdapter<co
         return null;
     }
     
-    @kotlin.Metadata(mv = {1, 5, 1}, k = 1, d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0010\u0010\u0013\u001a\u00020\u00142\b\u0010\u0015\u001a\u0004\u0018\u00010\u0016R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\bR\u0011\u0010\u000f\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\bR\u0011\u0010\u0011\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\b\u00a8\u0006\u0017"}, d2 = {"Lcom/example/myapplication/UI/CharecterAdapter$MovieViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "CountryName", "Landroid/widget/TextView;", "getCountryName", "()Landroid/widget/TextView;", "PersonImage", "Landroid/widget/ImageView;", "getPersonImage", "()Landroid/widget/ImageView;", "birthDate", "getBirthDate", "deathDate", "getDeathDate", "id", "getId", "setData", "", "model", "Lcom/example/myapplication/Api/ResponseDTOItem;", "app_debug"})
+    @kotlin.Metadata(mv = {1, 5, 1}, k = 1, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u000e\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nR\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006\u00a8\u0006\u000b"}, d2 = {"Lcom/example/myapplication/UI/CharecterAdapter$MovieViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "itemLayoutBinding", "Lcom/example/myapplication/databinding/ItemLayoutBinding;", "(Lcom/example/myapplication/databinding/ItemLayoutBinding;)V", "getItemLayoutBinding", "()Lcom/example/myapplication/databinding/ItemLayoutBinding;", "setData", "", "responseDTOItem", "Lcom/example/myapplication/Api/ResponseDTOItem;", "app_debug"})
     public static final class MovieViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
         @org.jetbrains.annotations.NotNull()
-        private final android.widget.ImageView PersonImage = null;
-        @org.jetbrains.annotations.NotNull()
-        private final android.widget.TextView CountryName = null;
-        @org.jetbrains.annotations.NotNull()
-        private final android.widget.TextView deathDate = null;
-        @org.jetbrains.annotations.NotNull()
-        private final android.widget.TextView birthDate = null;
-        @org.jetbrains.annotations.NotNull()
-        private final android.widget.TextView id = null;
+        private final com.example.myapplication.databinding.ItemLayoutBinding itemLayoutBinding = null;
         
         public MovieViewHolder(@org.jetbrains.annotations.NotNull()
-        android.view.View view) {
+        com.example.myapplication.databinding.ItemLayoutBinding itemLayoutBinding) {
             super(null);
         }
         
         @org.jetbrains.annotations.NotNull()
-        public final android.widget.ImageView getPersonImage() {
+        public final com.example.myapplication.databinding.ItemLayoutBinding getItemLayoutBinding() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
-        public final android.widget.TextView getCountryName() {
-            return null;
-        }
-        
-        @org.jetbrains.annotations.NotNull()
-        public final android.widget.TextView getDeathDate() {
-            return null;
-        }
-        
-        @org.jetbrains.annotations.NotNull()
-        public final android.widget.TextView getBirthDate() {
-            return null;
-        }
-        
-        @org.jetbrains.annotations.NotNull()
-        public final android.widget.TextView getId() {
-            return null;
-        }
-        
-        public final void setData(@org.jetbrains.annotations.Nullable()
-        com.example.myapplication.Api.ResponseDTOItem model) {
+        public final void setData(@org.jetbrains.annotations.NotNull()
+        com.example.myapplication.Api.ResponseDTOItem responseDTOItem) {
         }
     }
     

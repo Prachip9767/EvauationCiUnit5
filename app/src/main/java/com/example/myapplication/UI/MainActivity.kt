@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         mainBinding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         pagingViewModel=ViewModelProvider(this).get(PagingViewModel::class.java)

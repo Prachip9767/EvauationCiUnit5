@@ -1,38 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:layout_margin="10dp"
-        android:id="@+id/ivImage"
-        android:scaleType="centerCrop"
-        android:layout_width="250dp"
-        android:src="@drawable/img"
-        android:layout_height="250dp"/>
-    <TextView
-        android:id="@+id/tvid"
-        android:layout_width="wrap_content"
-        android:text="id"
-        android:layout_height="match_parent"/>
-    <TextView
-        android:id="@+id/tvCountryName"
-        android:layout_width="wrap_content"
-        android:text="Country Name"
-        android:layout_height="match_parent"/>
+<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_height="wrap_content">-->
+<!--    <ImageView-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:id="@+id/ivImage"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:src="@drawable/img"-->
+<!--        android:layout_height="250dp"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/tvid"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="id"-->
+<!--        android:layout_height="match_parent"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/tvCountryName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="Country Name"-->
+<!--        android:layout_height="match_parent"/>-->
 
-    <TextView
-        android:id="@+id/tvbDate"
-        android:layout_width="wrap_content"
-        android:text="Birth Date"
-        android:layout_height="match_parent"/>
-    <TextView
-        android:id="@+id/tvdDate"
-        android:layout_width="wrap_content"
-        android:text="Death Date"
-        android:layout_height="match_parent"/>
-</LinearLayout>
-</androidx.cardview.widget.CardView>
+<!--    <TextView-->
+<!--        android:id="@+id/tvbDate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="Birth Date"-->
+<!--        android:layout_height="match_parent"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/tvdDate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="Death Date"-->
+<!--        android:layout_height="match_parent"/>-->
+<!--</LinearLayout>-->
+<!--</androidx.cardview.widget.CardView>-->
+<layout>
+
+    <data>
+
+        <variable
+            name="country"
+            type="com.example.myapplication.Api.ResponseDTOItem" />
+
+        <variable
+            name="responseItem"
+            type="com.example.myapplication.Api.ResponseDTOItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/cardView"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/ivImage"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:src="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_toEndOf="@+id/ivImage"
+                android:text="@{responseItem.country.name}" />
+
+            <TextView
+                android:id="@+id/tvbDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_below="@+id/tvCountryName"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/ivImage"
+                android:text="@{responseItem.birthday}" />
+
+            <TextView
+                android:id="@+id/tvdDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvbDate"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/ivImage"
+                android:text="@{responseItem.deathday}"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tvid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvdDate"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/ivImage"
+                android:text="@{responseItem.deathday}"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

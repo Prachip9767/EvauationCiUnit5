@@ -2011,6 +2011,7 @@ int id browser_actions_menu_view 0x7f090069
 int id buttonPanel 0x7f09006a
 int id cache_measures 0x7f09006b
 int id cancel_button 0x7f09006c
+int id cardView 0x7f0901f2
 int id carryVelocity 0x7f09006d
 int id center 0x7f09006e
 int id center_horizontal 0x7f09006f

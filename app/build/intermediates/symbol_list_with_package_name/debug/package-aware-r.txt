@@ -2012,6 +2012,7 @@ id browser_actions_menu_view
 id buttonPanel
 id cache_measures
 id cancel_button
+id cardView
 id carryVelocity
 id center
 id center_horizontal
