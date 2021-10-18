@@ -17,13 +17,13 @@ import com.example.myapplication.R
 class CharecterAdapter() : PagingDataAdapter<ResponseDTOItem, CharecterAdapter.MovieViewHolder>(diffUtil) {
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<CharecterAdapter>() {
+        val diffUtil = object : DiffUtil.ItemCallback<ResponseDTOItem>() {
 
-            override fun areItemsTheSame(oldItem: CharecterAdapter, newItem: CharecterAdapter): Boolean {
-                return oldItem == newItem
+            override fun areItemsTheSame(oldItem: ResponseDTOItem, newItem: ResponseDTOItem): Boolean {
+                return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: CharecterAdapter, newItem:CharecterAdapter): Boolean {
+            override fun areContentsTheSame(oldItem: ResponseDTOItem, newItem:ResponseDTOItem): Boolean {
                 return oldItem.equals(newItem)
             }
 
