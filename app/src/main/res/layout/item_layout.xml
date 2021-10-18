@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:text="Country Name"
         android:layout_height="match_parent"/>
-    //
+
     <TextView
         android:id="@+id/tvbDate"
         android:layout_width="wrap_content"
